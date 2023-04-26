@@ -1,0 +1,79 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object pnlHeader: TPanel
+    Align = Top
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnOpenImage: TButton
+      Align = Left
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Open Image'
+      OnClick = btnOpenImageClick
+    end
+    object btnClose: TButton
+      Align = Right
+      Position.X = 590.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 45.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'cleareditbutton'
+      TabOrder = 1
+      Text = 'btnClose'
+      OnClick = btnCloseClick
+    end
+    object cboxImgSelection: TComboBox
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 115.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = cboxImgSelectionChange
+      object ListBoxItem1: TListBoxItem
+        TabOrder = 0
+        Text = 'img1.png'
+      end
+      object ListBoxItem2: TListBoxItem
+        TabOrder = 1
+        Text = 'img2.png'
+      end
+      object ListBoxItem3: TListBoxItem
+        TabOrder = 2
+        Text = 'img3.png'
+      end
+    end
+  end
+  object imgFile: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    WrapMode = Stretch
+  end
+end
