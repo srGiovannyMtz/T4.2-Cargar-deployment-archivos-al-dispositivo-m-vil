@@ -17,6 +17,8 @@ type
     ListBoxItem1: TListBoxItem;
     ListBoxItem2: TListBoxItem;
     ListBoxItem3: TListBoxItem;
+    lblRuta: TLabel;
+    lblNameImg: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnOpenImageClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
@@ -47,6 +49,8 @@ procedure TfrmMain.btnOpenImageClick(Sender: TObject);
 begin
   // este método carga la imagen en el componente TImage
   imgFile.Bitmap.LoadFromFile(imagePath + PathDelim + imageName);
+  lblRuta.Text := imagePath;
+  lblNameImg.Text := imageName;
 end;
 
 procedure TfrmMain.cboxImgSelectionChange(Sender: TObject);
